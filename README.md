@@ -18,6 +18,6 @@ This is a sticky note inspired task management app that a software manager can u
     - Task (standard text)
     - Complete state
 
-3. Complete cards should be de-emphasised 
+3. Complete cards are de-emphasised 
 
 4. Upated and delete sticky note
