@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sticky Scheduler</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+
+    </head>
+    <body id="main">
+        <div class="header">
+            <span>Sticky Scheduler</span>
+            <div class="sub-header">Click anywhere on the screen to add a sticky note at that point</div>
+        </div>
+
+    
+        <ul id="unordered-list">
+            <li id="form-container" style="display: none;">
+                <a href="#">
+                    <form id="note-form">
+                        <!-- The assumtion is that assignee and priority data will be coming from a database
+                            that is why a select form was used for these fields. -->
+                        <p>
+                            <b>Assignee:</b> 
+                            <select id="assignee" name="assignee">
+                                <option value="">Select Assignee</option>
+                                <option value="John Smith">John Smith</option>
+                                <option value="Jana du Toit">Jana du Toit</option>
+                                <option value="katleho Mohapi">katleho Mohapi</option>
+                            </select>
+                        </p>
+                        <p>
+                            <b>Priority:</b> 
+                            <select id="priority" name="priority">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </p>
+                        <p>
+                            <b>Task:</b> 
+                            <textarea name="task" id="task" cols="25" rows="1"></textarea>
+                        </p>
+                        <p>
+                            <b>Completed:</b>
+                            <input name="completed" type="checkbox" class="checkbox" id="completed" disabled>
+                        </p>
+                        <div class="button button2" id="save-changes" style="display: none;">Save changes</div>
+                        <button type="submit" class="button button2">Save</button>
+                        <div class="cancel-btn button button3" id="cancel-form">Discard</div>
+                    </form>
+                </a>
+            </li>
+        </ul>
+
+        <!-- JavaScript -->
+        <script src="./app.js"></script> 
+    </body>
+</html>
